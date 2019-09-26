@@ -1,0 +1,363 @@
+/* GENERAL */
+body {
+    margin: 0;
+    font-family: 'robot', sans-serif;
+  }
+  .text-center {
+      text-align: center;
+  }
+  .d-flex-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  .d-flex {
+      display: flex;
+  }
+  .d-flex-center-col {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+  }
+  .banner {
+    position: relative;
+      height: auto;
+      background-repeat: no-repeat;
+  }
+  .banner img {
+    margin-top:-30px;
+      width: 100%;
+  }
+  .menu {
+    display: none;
+    text-align:center;
+  }
+  /* burguer */
+  /* Style the navigation menu */
+  .topnav {
+   overflow: hidden;
+   background-color: black;
+   position: relative;
+   font-variant: small-caps;
+   letter-spacing: 5px;
+   text-align: center;
+  }
+  .size-logo img{
+    width:60px;
+  }
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  .topnav #myLinks {
+   display: none;
+  }
+  /* Style navigation menu links */
+  .topnav a {
+   color: white;
+   padding: 15px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   display: block;
+  }
+  /* Style the hamburger menu */
+  .topnav a.icon {
+   background: black;
+   display: block;
+   position: absolute;
+   right: 0px;
+   top: 9px;
+  }
+  /* Add a grey background color on mouse-over */
+  .hover-menu a:hover {
+   background-color: #ddd;
+   color: black;
+   transition: 1.5s;
+  }
+  /* Style the active link (or home/logo) */
+  .active {
+   background-color: black;
+   color: white;
+  }
+  #myLinks a {
+      padding-top: 8px;
+      padding-bottom: 8px;
+  }
+
+
+
+
+.text-confirm  {
+  
+  font-family: robot;
+  color:white;
+  font-size: 27px;
+  text-align: center;
+  width: 100%;
+  background-color: black;
+  margin-top:-50px;
+  padding-top:15px;
+padding-bottom: 39px;
+
+
+  
+}
+
+ 
+  /*-------------------------------- FOOTER ----------------------------------*/
+  .container_footer {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    background: black;
+    padding-top : 35px;
+    padding-bottom: 35px;
+    border-top: solid 1.3px white;
+  }
+  .icones_media {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .icones_media ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+  .icones_media ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0px 5px;
+    border-radius: 100%;
+    background: #cd84f1;
+  }
+  .icones_media ul li a {
+    display: block;
+    text-decoration: none;
+    color: #272727;
+    font-size: 25px;
+  }
+  .icones_media ul li a i {
+    line-height: 50px;
+  }
+  .icones_media ul li:hover {
+    background-color: #999999;
+  }
+  .icones_media ul li a:hover>i {
+    transform: scale(1.6) rotate(25deg);
+  }
+  .first_lign {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+  }
+  .first_lign ul {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .first_lign ul li {
+    display: inline-block;
+    margin: 5px 20px;
+  }
+  .first_lign ul li a {
+    text-decoration: none;
+    outline: none;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .first_lign ul li a:hover {
+    color: #cd84f1;
+  }
+  /* DESKTOP */
+  @media only screen and (min-width: 961px) {
+    .logo img {
+        display: flex;
+        width: 40%;
+    }
+    /* MENU DESKTOP */
+    .topnav {
+    display: none;
+    }
+    .menu{
+    display:flex;
+    justify-content: space-around;
+    margin: 0;
+    height: 80px;
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    }
+    nav a
+    {
+    text-decoration:none;
+    color: white;
+    font-variant: small-caps;
+    letter-spacing: 5px;
+    }
+    .menu ul {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    }
+    .menu li{
+    text-decoration: none;
+    display:flex;
+    justify-content: space-around;
+    padding: 40px;
+    text-decoration: none;
+    color: white;
+    list-style:none;
+    font-size: 1.4em;
+    }
+    nav a:hover {
+        color: #cd84f1;
+        text-decoration: overline;
+        transition: 1.5s;
+    }
+  
+
+  
+    
+    /* SLIDESHOW */
+    .effect a img:hover {
+        opacity: 0.6;
+    }
+    .slideshow-container {
+        padding-bottom: 50px;
+        width: 80%;
+    }
+    .active {
+        background-color: #717171;
+    }
+    /* INFOS */
+    .infos {
+        padding-top: 30px;
+        padding-bottom: 40px;
+        border: none;
+    }
+    .infos-container {
+        width: 80%;
+        margin: auto;
+        text-align: justify;
+        display: flex;
+        justify-content: center;
+    }
+    .resize-pics {
+        width: 50px;
+    }
+    .padding-box {
+        padding: 15px;
+    }
+    .space-btw-text {
+        padding-left: 20px;
+    }
+    .border-bot {
+        border-bottom: none;
+    }
+    .infos h4 {
+        font-size: 15px;
+        color: #cd84f1;
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 15px;
+    }
+    .infos ul {
+        list-style-type: none;
+        padding: 0;
+        font-size: 15px;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .hover-effect a:hover {
+        color: #cd84f1;
+    }
+    .zoom {
+        transition: transform .2s;
+        width: 100%;
+        margin: auto;
+    }
+    .zoom:hover {
+        transform: scale(1.1);
+    }
+    .hover-rotate img:hover {
+        -moz-transform:rotate(360deg);
+        -webkit-transform:rotate(360deg);
+        transform: rotate(360deg);
+        transition-duration: 1s;
+    }
+    .hover-rotate-neg img:hover {
+        -moz-transform:rotate(-360deg);
+        -webkit-transform:rotate(-360deg);
+        transform: rotate(-360deg);
+        transition-duration: 1s;
+    }
+    /* FORMULAIRE */
+      #contact {
+        display: block; 
+        height: 80px; /*same height as header*/ 
+        margin-top: -80px; /*same height as header*/ 
+        visibility: hidden;
+      }
+      .container1_form {
+        width: 60%;
+        margin: 10px;
+      } 
+      .prenomnom {
+        display: flex;
+        width: 100%;
+      } 
+      .container2_contact {
+        display: flex;
+        width: 80%;
+        background: #f0f0f0;
+        flex-direction: row-reverse;
+        border: solid 1px black;
+        padding-top: 0;
+      } 
+      .container2_form {
+        width: 40%;
+      }
+      .container_jour_horaire {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 35px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+      } 
+      .background-black {
+        background-color: black;
+        width: 100%;
+      }
+      .jour {
+        background-color: black;
+        border-bottom: 1px solid white;
+        color: white;
+        line-height: 50px;
+        margin: 0 10px;
+        text-align: center;
+        flex-direction: column;
+        width: 50%;
+      }
+      .txt4 {
+        font-size: 32px;
+      }
+      .txt5 {
+        font-size: 20px;
+      }
+      .container_footer {
+        border-top: none;
+      }
+    }

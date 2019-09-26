@@ -15,16 +15,8 @@
 <body>
       <header>
               <!-- MENU DESKTOP -->
-              <nav class="menu">
-                  <ul>
-                      <li class="logo"><img src="images_header/logo.png" alt="Logo Vape&cie"></li>
-                      <li class="home"><a href="#">accueil</a></li>
-                      <li class="about"><a href="#about">nous</a></li>
-                      <li class="catalog"><a href="#">shop</a></li>
-                      <li class="mail"><a href="#contact">contact</a></li>
-                  </ul>
-              </nav>
-              <!-- burguer -->
+              <?php include_once("_nav.php"); ?>
+              <!-- burger -->
               <div class="topnav size-logo">
                     <a href="#home" class="active"><img src="images_header/logo.png" alt="logo Vape&cie"></a>
               <!-- Navigation links (hidden by default) -->
@@ -69,24 +61,33 @@
                   </div>
             </div>
       </section>
-      <!-- SLIDESHOW -->
-      <div id="gallery" class="pad-top-slide background padding-bot">
+
+
+      <?php
+        $gallerie = [
+            'images-slideshow/Vapor-Bar.png'        => 'Notre shop',
+            'images-slideshow/special-sales.png'    => 'Nos évènements',
+            'images-slideshow/vapor-market.png'     => 'Nos produits',
+        ];
+        ?>
+      <!-- SLIDESHOW -->  
+    <div id="gallery" class="pad-top-slide background padding-bot">
       <!-- Slideshow container -->
       <div class="black-filter">
           <div class="slideshow-container">
               <!-- Full-width images with number and caption text -->
-              <div class="mySlides fade zoom">
-                    <img src="images-slideshow/Vapor-Bar.png" style="width:100%" alt="Notre shop">
+              
+                    <?php
+                    foreach ($gallerie as $picture => $comment) {
+                        echo '<div class="mySlides fade zoom">';
+                        echo '<span class ="commentaire">' .$comment . '</span>';
+                        echo '<img src=" '. $picture . '" alt= "Notre shop" >';
+                        echo '</div>';
+                    }
+                ?>
                     <!-- <div class="text">Shop</div> -->
-              </div>
-              <div class="mySlides fade zoom">
-                    <img src="images-slideshow/special-sales.png" style="width:100%" alt="Nos evenements">
-                    <!-- <div class="text">Vap'eros</div> -->
-              </div>
-              <div class="mySlides fade zoom">
-                    <img src="images-slideshow/vapor-market.png" style="width:100%" alt="Nos produits">
-                    <!-- <div class="text">Experts</div> -->
-              </div>
+            
+             
               <!-- Next and previous buttons -->
                   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                   <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -149,42 +150,41 @@
 <span class="ancres" id="contact"></span>
 <section id="form" class="container1_contact">
     <div class="container2_contact">
-        <form action="document.php" method="post" class="container1_form">
+        <form action="form.php" method="get" class="container1_form">
             <div class="titlesouspartie">
                 <h2>contactez-nous</h2>
             </div>
             <div class="prenomnom">
                 <div class="box-input rs1-wrap-input100">
                     <input id="first-name" class="input100" type="text" name="first-name" placeholder="Prénom *"
-                        required>
+                        required pattern ="{A-Za-z}" title ="pas de caractères spéciaux">
                     <span class="move_input"></span>
                 </div>
                 <div class="box-input rs2-wrap-input100">
-                    <input class="input100" type="text" name="last-name" placeholder="Nom *" required>
+                    <input class="input100" type="text" name="last-name" placeholder="Nom *" required pattern ="{A-Za-z}" title ="pas de cractère spéciaux">
                     <span class="move_input"></span>
                 </div>
             </div>
             <label class="label-input100" for="email">Email *</label>
             <div class="box-input">
                 <input id="email" class="input100" type="email" name="email" placeholder="example@email.com"
-                    required>
+                    required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                 <span class="move_input"></span>
             </div>
             <label class="label-input100" for="phone">Téléphone *</label>
             <div class="box-input">
-                <input id="phone" class="input100" type="text" name="phone" placeholder="06 xx xx xx xx">
+                <input id="phone" class="input100" type="tel" name="phone" placeholder="06 xx xx xx xx" required pattern =".{6,}" >
                 <span class="move_input"></span>
             </div>
             <label class="label-input100" for="message">Message *</label>
             <div class="box-input">
-                <textarea id="message" class="input100" name="message" placeholder="Ecrivez votre message"
+                <textarea id="message" class="input100" type ="text" name="message" placeholder="Ecrivez votre message"
                     required></textarea>
                 <span class="move_input"></span>
             </div>
             <div class="container_btn">
-                <button class="interieur_btn">
-                    Envoyer
-                </button>
+                <input class="interieur_btn" type="submit">
+        
             </div>
         </form>
         <div class="container2_form">
@@ -231,27 +231,7 @@
         </div>
     </div>
 </div>
-<footer>
-    <div class="container_footer">
-        <div class="icones_media">
-            <ul>
-                <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-google-plus"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
-            </ul>
-        </div>
-        <div class="first_lign">
-            <ul>
-                <li><a href="#">notre équipe</a></li>
-                <li><a href="#">engagement qualité</a></li>
-                <li><a href="#">mentions légales</a></li>
-                <li><a href="#">confidentialité</a></li>
-            </ul>
-        </div>
-    </div>
-</footer>
+<?php include_once("_footer.php"); ?>
 <script src="script.js"></script>
 </body>
 </html>
