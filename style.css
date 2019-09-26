@@ -390,6 +390,7 @@ textarea.input100 {
   -o-transform: scale(1);
   transform: scale(1);
 }
+
 /* NO GLOW ON TEXT AREA AND INPUTS */
 textarea, input { outline: none; }
 /* NO GLOW ON TEXT AREA AND INPUTS */

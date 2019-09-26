@@ -12,19 +12,18 @@
       <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
       <script src="https://kit.fontawesome.com/c66c66f866.js"></script>
 </head>
+    <body>
 
-<body>
 
 <?php include_once("_nav.php"); ?>
-
 <div class="banner">
     <img src="images_header/neon2.png" alt="image vapoteuse néon">
-    <div class="text-confirm"> Merci <?php echo $_GET['first-name']; ?> <br>
-    <br>Nous avons bien reçu votre demande et la traiterons dans les meilleurs délais. </div>	
+        <div class="text-confirm"> Merci <?php echo $_GET['first-name']; ?>, <br>
+        <br> Votre demande a été envoyée à notre service client. Vous recevrez une réponse dans les meilleurs délais. </div>
 </div>
-
 <?php include_once("_footer.php"); ?>
 <script src="script.js"></script>
 
-</body>
+    </body>
 </html>
+

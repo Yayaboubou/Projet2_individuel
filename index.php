@@ -80,7 +80,6 @@
                     <?php
                     foreach ($gallerie as $picture => $comment) {
                         echo '<div class="mySlides fade zoom">';
-                        echo '<span class ="commentaire">' .$comment . '</span>';
                         echo '<img src=" '. $picture . '" alt= "Notre shop" >';
                         echo '</div>';
                     }
@@ -154,10 +153,10 @@
             <div class="titlesouspartie">
                 <h2>contactez-nous</h2>
             </div>
+
             <div class="prenomnom">
                 <div class="box-input rs1-wrap-input100">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Prénom *"
-                        required pattern ="{A-Za-z}" title ="pas de caractères spéciaux">
+                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Prénom *" required>
                     <span class="move_input"></span>
                 </div>
                 <div class="box-input rs2-wrap-input100">
@@ -165,6 +164,7 @@
                     <span class="move_input"></span>
                 </div>
             </div>
+
             <label class="label-input100" for="email">Email *</label>
             <div class="box-input">
                 <input id="email" class="input100" type="email" name="email" placeholder="example@email.com"
@@ -231,6 +231,12 @@
         </div>
     </div>
 </div>
+<?php
+$fileTarget = donneeformulaire.txt;
+if (isset($_GET['first-name'])){
+    file_put_contents($fileTarget, $_GET['first-name']);
+}
+?>
 <?php include_once("_footer.php"); ?>
 <script src="script.js"></script>
 </body>
